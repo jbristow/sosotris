@@ -2,6 +2,8 @@ import "./App.css";
 import emperor from "./assets/cards/IV_L_Empereur.jpg";
 import { CardRole } from "./CardRole.tsx";
 import { unshuffled } from "./CardData.tsx";
+import { Box, Button } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 function shuffle<T>(array: T[]) {
   // Create a shallow copy to avoid modifying the original array in place
@@ -23,6 +25,28 @@ function App() {
 
   return (
     <>
+      <Box
+        sx={{
+          position: "fixed",
+          top: "0",
+          left: "0",
+          padding: "4px",
+          zIndex: "1000",
+        }}
+      >
+        <Button
+          color={"inherit"}
+          variant={"contained"}
+          startIcon={<GitHubIcon />}
+          href="https://github.com/jbristow/sosotris"
+          sx={{
+            color: "black",
+            textTransform: "none",
+          }}
+        >
+          GitHub
+        </Button>
+      </Box>
       <div
         className={"card-role"}
         style={{
