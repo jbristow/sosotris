@@ -1,6 +1,5 @@
 import { Card } from "./Card.tsx";
 import { Tooltip } from "@mui/material";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 export function CardRole(props: {
   title: string;
@@ -13,18 +12,10 @@ export function CardRole(props: {
   return (
     <div className={"card-role"}>
       <div className={"card-role-title"}>
-        <div className={"position-title"}>{props.title}</div>
-        <div style={{ marginTop: "6px", padding: "0" }}>
-          <Tooltip
-            title={<div style={{ fontSize: "15px" }}>{props.description}</div>}
-            arrow
-            placement="right-end"
-          >
-            <InfoOutlinedIcon fontSize={"small"} />
-          </Tooltip>
-        </div>
+        <Tooltip title={props.description} arrow placement="top-start">
+          <div>{props.title}</div>
+        </Tooltip>
       </div>
-
       <Card
         id={props.card}
         inverted={inverted ?? false}

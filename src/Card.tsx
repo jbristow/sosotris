@@ -1,7 +1,6 @@
 import sign from "./assets/cards/CardBacks.jpg";
 import { CARD_DB, type CardData } from "./CardData.tsx";
 import { Tooltip } from "@mui/material";
-import ContactSupportOutlinedIcon from "@mui/icons-material/ContactSupportOutlined";
 
 function meaning(card: CardData, inverted: boolean, ineffable: boolean) {
   if (ineffable) {
@@ -39,16 +38,18 @@ function CardTitle({
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        gap: "5px",
-        justifyContent: "center",
-      }}
-    >
-      <div className={"card-title"}>{title(card, inverted, ineffable)}</div>
-      <CardCaption meaning={meaning(card, inverted, ineffable)} />
+    <div className={"card-title"}>
+      <Tooltip
+        title={
+          <div className={"card-tooltip-title"}>
+            {meaning(card, inverted, ineffable)}
+          </div>
+        }
+        arrow
+        placement="bottom-start"
+      >
+        <div className={"card-tooltip"}>{title(card, inverted, ineffable)}</div>
+      </Tooltip>
     </div>
   );
 }
@@ -91,18 +92,6 @@ function CardImg({
   } else {
     return <img src={src} className={"card-img"} alt={title} height={height} />;
   }
-}
-
-function CardCaption(props: { meaning: string }) {
-  return (
-    <Tooltip
-      title={<div style={{ fontSize: "15px" }}>{props.meaning}</div>}
-      arrow
-      placement="right-end"
-    >
-      <ContactSupportOutlinedIcon fontSize={"small"} />
-    </Tooltip>
-  );
 }
 
 export function Card(props: {
