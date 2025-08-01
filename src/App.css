@@ -32,7 +32,9 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
+body {
+  /* Optional: Add text styling for a distressed look */
+}
 .read-the-docs {
   color: #888;
 }
@@ -45,33 +47,28 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-end;
+  opacity: 100%;
 }
 
 .cardrow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  gap: 40px 60px;
-  padding: 5px;
+  gap: 5px 10px;
 }
 .cardgroup {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  width: inherit;
-  gap: 20px;
-  padding: 5px;
 }
 .cardgroup-left {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   width: inherit;
-  gap: 20px;
-  padding: 5px;
   flex-grow: 3;
 }
 .position-title {
@@ -81,4 +78,26 @@
 .card-title {
   font-size: 12px;
   font-style: italic;
+}
+.card {
+  width: 200px;
+}
+.card-role {
+  background: #000000 radial-gradient(circle at bottom, #343424, #343424 10%, transparent 10%, transparent 20%, #343424 20%, #343424 30%, transparent 30%, transparent 40%, #343424 40%, #343424 50%, transparent 50%, transparent 60%, #343424 60%, #343424 70%, transparent 70%, transparent 80%, #343424 80%, #343424 90%, transparent 90%);
+  background-size: 1em 1em;
+  margin: 5px;
+
+  .card-role-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.reading{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

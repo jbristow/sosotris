@@ -1,69 +1,22 @@
-# React + TypeScript + Vite
+# Sosotris
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> There are so many things which are impossible to explain!
 
-Currently, two official plugins are available:
+This is a silly webapp that lays out a tarot reading using the method described in the [King in Yellow Tarot][1] from [Arc Dream Publishing][2]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The card images used are from Luciellae's [Rider-Waite Smith Tarot Cards][3] and the meaning hints are copied from the book [The Pictorial Key to the Tarot][4] by Arthur Edward Waite.
 
-## Expanding the ESLint configuration
+This app should be used for entertainment purposes only, and is not to be taken as legal or financial advice.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Running Locally
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Install yarn
+* `yarn install`
+* `yarn run dev`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[1]: https://shop.arcdream.com/products/the-king-in-yellow-tarot-deck
+[2]: https://arcdream.com/
+[3]: https://luciellaes.itch.io/rider-waite-smith-tarot-cards-cc0
+[4]: https://upload.wikimedia.org/wikipedia/commons/9/99/The_Pictorial_Key_to_the_Tarot.pdf
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```

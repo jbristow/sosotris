@@ -1,4 +1,4 @@
-import sign from "./assets/cards/Have_You_Found_It_.png";
+import sign from "./assets/cards/CardBacks.jpg";
 import { CARD_DB, type CardData } from "./CardData.tsx";
 import { Tooltip } from "@mui/material";
 import ContactSupportOutlinedIcon from "@mui/icons-material/ContactSupportOutlined";
@@ -58,20 +58,38 @@ function CardImg({
   title,
   inverted,
   ineffable,
+  height = "200px",
 }: {
   src: string | undefined;
   title: string | undefined;
   inverted: boolean;
   ineffable: boolean;
+  height: string | number | undefined;
 }) {
   if (src == null) {
-    return <img src={sign} className={"card-img"} alt="Have You Found It?" />;
+    return (
+      <img
+        src={sign}
+        className={"card-img"}
+        alt="Have You Found It?"
+        height={height}
+      />
+    );
   } else if (ineffable) {
-    return <img src={sign} className={"card-img"} alt="Ineffable" />;
+    return (
+      <img src={sign} className={"card-img"} alt="Ineffable" height={height} />
+    );
   } else if (inverted) {
-    return <img src={src} className={"card-img inverted"} alt={title} />;
+    return (
+      <img
+        src={src}
+        className={"card-img inverted"}
+        alt={title}
+        height={height}
+      />
+    );
   } else {
-    return <img src={src} className={"card-img"} alt={title} />;
+    return <img src={src} className={"card-img"} alt={title} height={height} />;
   }
 }
 
@@ -91,6 +109,7 @@ export function Card(props: {
   id?: string | null;
   inverted: boolean;
   ineffable: boolean;
+  height?: string | number;
 }) {
   let card: CardData | null;
   if (props.id == null) {
@@ -100,7 +119,7 @@ export function Card(props: {
   }
 
   return (
-    <div>
+    <div className={"card"}>
       <CardTitle
         card={card}
         inverted={props.inverted ?? false}
@@ -111,6 +130,7 @@ export function Card(props: {
         title={card?.title}
         inverted={props.inverted}
         ineffable={props.ineffable}
+        height={props.height}
       />
     </div>
   );

@@ -1,5 +1,5 @@
 import "./App.css";
-import emperor from "./assets/cards/IV_L_Empereur.png";
+import emperor from "./assets/cards/IV_L_Empereur.jpg";
 import { CardRole } from "./CardRole.tsx";
 import { unshuffled } from "./CardData.tsx";
 
@@ -23,21 +23,23 @@ function App() {
 
   return (
     <>
+      <div
+        className={"card-role"}
+        style={{
+          position: "absolute",
+          top: "0",
+          right: "0",
+        }}
+      >
+        <img
+          height={"200px"}
+          src={emperor}
+          className={"emperor"}
+          alt={"IV: L'Empereur"}
+        />
+      </div>
       <div className={"container"}>
-        <div style={{ justifyContent: "flex-end" }}>
-          <div>
-            <img src={emperor} className={"emperor"} alt={"IV: L'Empereur"} />
-            <div>{ineffable}</div>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className={"reading"}>
           <div className={"cardrow"}>
             <div className={"cardgroup"} style={{ flexGrow: 4 }}>
               <CardRole

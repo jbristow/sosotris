@@ -11,16 +11,8 @@ export function CardRole(props: {
 }) {
   const inverted = Math.random() * 3 > 2;
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "5px",
-        }}
-      >
+    <div className={"card-role"}>
+      <div className={"card-role-title"}>
         <div className={"position-title"}>{props.title}</div>
         <div style={{ marginTop: "6px", padding: "0" }}>
           <Tooltip
