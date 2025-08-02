@@ -2,7 +2,7 @@ import "./App.css";
 import emperor from "./assets/cards/IV_L_Empereur.jpg";
 import { CardRole } from "./CardRole.tsx";
 import { unshuffled } from "./CardData.tsx";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 function shuffle<T>(array: T[]) {
@@ -25,6 +25,153 @@ function App() {
 
   return (
     <>
+      <Grid container>
+        <Grid size={12} display="flex" justifyContent="center">
+          <CardRole
+            title={"Signifier"}
+            ord={1}
+            description={
+              "The card chosen by the querent to suggest the situation."
+            }
+            card={cards[0]}
+            ineffable={ineffable === 0 || ineffable > 12}
+          />
+        </Grid>
+        <Grid display="flex" justifyContent="center" size={9}>
+          <CardRole
+            title={"Mask"}
+            ord={2}
+            description={
+              "This is how the querent presents themselves to others."
+            }
+            card={cards[1]}
+            ineffable={ineffable === 1}
+          />
+          <CardRole
+            title={"Performance"}
+            ord={3}
+            description={
+              "The events and other factors immediately around the situation."
+            }
+            card={cards[2]}
+            ineffable={ineffable === 2}
+          />
+          <CardRole
+            title={"Audience"}
+            ord={4}
+            description={"The people immediately surrounding the situation."}
+            card={cards[3]}
+            ineffable={ineffable === 3}
+          />
+        </Grid>
+        <Grid>
+          <CardRole
+            title={"Rising Action"}
+            ord={10}
+            description={"The next phase of the situation."}
+            card={cards[9]}
+            ineffable={ineffable === 9}
+          />
+        </Grid>
+        <Grid size={9} display="flex" justifyContent="center">
+          <CardRole
+            title={"Unconscious"}
+            ord={5}
+            description={
+              "The inner nature of the querent as it relates to the situation."
+            }
+            card={cards[4]}
+            ineffable={ineffable === 4}
+          />
+          <CardRole
+            title={"Actor"}
+            ord={6}
+            description={
+              "How the querent perceives themselves as relates to the situation."
+            }
+            card={cards[5]}
+            ineffable={ineffable === 5}
+          />
+        </Grid>
+        <Grid>
+          <CardRole
+            title={"Fate"}
+            ord={11}
+            description={"That which cannot be changed."}
+            card={cards[10]}
+          />
+        </Grid>
+        <Grid size={9} display="flex" justifyContent="center">
+          <CardRole
+            title={"Script"}
+            ord={7}
+            description={
+              "The factors that brought the situation to its present state."
+            }
+            card={cards[6]}
+            ineffable={ineffable === 6}
+          />
+        </Grid>
+        <Grid>
+          <CardRole
+            title={"Revelation"}
+            ord={12}
+            description={"That which will be revealed."}
+            card={cards[11]}
+            ineffable={ineffable === 11}
+          />
+        </Grid>
+        <Grid size={9} display="flex" justifyContent="center">
+          <CardRole
+            title={"Stage"}
+            ord={8}
+            description={
+              "The backdrop of the situation. This concerns factors less visible than the Performance but sometimes more crucial."
+            }
+            card={cards[7]}
+            ineffable={ineffable === 7}
+          />
+          <CardRole
+            title={"Unexpected"}
+            ord={9}
+            description={"A surprise that lies in wait."}
+            card={cards[8]}
+            ineffable={ineffable === 8}
+          />
+        </Grid>
+        <Grid>
+          <CardRole
+            title={"Denouement"}
+            ord={13}
+            description={"The final outcome of the situation."}
+            card={cards[12]}
+            ineffable={ineffable === 12}
+          />
+        </Grid>
+      </Grid>
+      <div
+        style={{
+          position: "absolute",
+          top: "0",
+          right: "0",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Grid size={3}>
+          <Box className="card-role" display="flex" justifyContent="center">
+            <Grid className="card">
+              <div>
+                <img
+                  src={emperor}
+                  className={"card-img"}
+                  alt={"IV: L'Empereur"}
+                />
+              </div>
+            </Grid>
+          </Box>
+        </Grid>
+      </div>
       <Box
         sx={{
           position: "fixed",
@@ -47,159 +194,6 @@ function App() {
           GitHub
         </Button>
       </Box>
-      <div
-        className={"card-role"}
-        style={{
-          position: "absolute",
-          top: "0",
-          right: "0",
-        }}
-      >
-        <img
-          height={"200px"}
-          src={emperor}
-          className={"emperor"}
-          alt={"IV: L'Empereur"}
-        />
-      </div>
-      <div className={"container"}>
-        <div className={"reading"}>
-          <div className={"cardrow"}>
-            <div className={"cardgroup"} style={{ flexGrow: 4 }}>
-              <CardRole
-                title={"Signifier"}
-                ord={1}
-                description={
-                  "The card chosen by the querent to suggest the situation."
-                }
-                card={cards[0]}
-                ineffable={ineffable === 0 || ineffable > 12}
-              />
-            </div>
-          </div>
-          <div className={"cardrow"}>
-            <div className={"cardgroup-left"}>
-              <CardRole
-                title={"Mask"}
-                ord={2}
-                description={
-                  "This is how the querent presents themselves to others."
-                }
-                card={cards[1]}
-                ineffable={ineffable === 1}
-              />
-              <CardRole
-                title={"Performance"}
-                ord={3}
-                description={
-                  "The events and other factors immediately around the situation."
-                }
-                card={cards[2]}
-                ineffable={ineffable === 2}
-              />
-              <CardRole
-                title={"Audience"}
-                ord={4}
-                description={
-                  "The people immediately surrounding the situation."
-                }
-                card={cards[3]}
-                ineffable={ineffable === 3}
-              />
-            </div>
-            <div className={"cardgroup"}>
-              <CardRole
-                title={"Rising Action"}
-                ord={10}
-                description={"The next phase of the situation."}
-                card={cards[9]}
-                ineffable={ineffable === 9}
-              />
-            </div>
-          </div>
-          <div className={"cardrow"}>
-            <div className={"cardgroup-left"}>
-              <CardRole
-                title={"Unconscious"}
-                ord={5}
-                description={
-                  "The inner nature of the querent as it relates to the situation."
-                }
-                card={cards[4]}
-                ineffable={ineffable === 4}
-              />
-              <CardRole
-                title={"Actor"}
-                ord={6}
-                description={
-                  "How the querent perceives themselves as relates to the situation."
-                }
-                card={cards[5]}
-                ineffable={ineffable === 5}
-              />
-            </div>
-            <div className={"cardgroup"}>
-              <CardRole
-                title={"Fate"}
-                ord={11}
-                description={"That which cannot be changed."}
-                card={cards[10]}
-              />
-            </div>
-          </div>
-          <div className={"cardrow"}>
-            <div className={"cardgroup-left"}>
-              <CardRole
-                title={"Script"}
-                ord={7}
-                description={
-                  "The factors that brought the situation to its present state."
-                }
-                card={cards[6]}
-                ineffable={ineffable === 6}
-              />
-            </div>
-            <div className={"cardgroup"}>
-              <CardRole
-                title={"Revelation"}
-                ord={12}
-                description={"That which will be revealed."}
-                card={cards[11]}
-                ineffable={ineffable === 11}
-              />
-            </div>
-          </div>
-          <div className={"cardrow"}>
-            <div className={"cardgroup-left"}>
-              <CardRole
-                title={"Stage"}
-                ord={8}
-                description={
-                  "The backdrop of the situation. This concerns factors less visible than the Performance but sometimes more crucial."
-                }
-                card={cards[7]}
-                ineffable={ineffable === 7}
-              />
-              <CardRole
-                title={"Unexpected"}
-                ord={9}
-                description={"A surprise that lies in wait."}
-                card={cards[8]}
-                ineffable={ineffable === 8}
-              />
-            </div>
-            <div className={"cardgroup"}>
-              <CardRole
-                title={"Denouement"}
-                ord={13}
-                description={"The final outcome of the situation."}
-                card={cards[12]}
-                ineffable={ineffable === 12}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

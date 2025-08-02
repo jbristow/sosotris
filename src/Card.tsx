@@ -1,6 +1,6 @@
 import sign from "./assets/cards/CardBacks.jpg";
 import { CARD_DB, type CardData } from "./CardData.tsx";
-import { Tooltip } from "@mui/material";
+import { Grid, Tooltip } from "@mui/material";
 
 function meaning(card: CardData, inverted: boolean, ineffable: boolean) {
   if (ineffable) {
@@ -38,19 +38,21 @@ function CardTitle({
   }
 
   return (
-    <div className={"card-title"}>
+    <Grid className={"card-title"}>
       <Tooltip
         title={
-          <div className={"card-tooltip-title"}>
+          <Grid className={"card-tooltip-title"}>
             {meaning(card, inverted, ineffable)}
-          </div>
+          </Grid>
         }
         arrow
         placement="bottom-start"
       >
-        <div className={"card-tooltip"}>{title(card, inverted, ineffable)}</div>
+        <Grid className={"card-tooltip"}>
+          {title(card, inverted, ineffable)}
+        </Grid>
       </Tooltip>
-    </div>
+    </Grid>
   );
 }
 
@@ -59,38 +61,20 @@ function CardImg({
   title,
   inverted,
   ineffable,
-  height = "200px",
 }: {
   src: string | undefined;
   title: string | undefined;
   inverted: boolean;
   ineffable: boolean;
-  height: string | number | undefined;
 }) {
   if (src == null) {
-    return (
-      <img
-        src={sign}
-        className={"card-img"}
-        alt="Have You Found It?"
-        height={height}
-      />
-    );
+    return <img src={sign} className={"card-img"} alt="Have You Found It?" />;
   } else if (ineffable) {
-    return (
-      <img src={sign} className={"card-img"} alt="Ineffable" height={height} />
-    );
+    return <img src={sign} className={"card-img"} alt="Ineffable" />;
   } else if (inverted) {
-    return (
-      <img
-        src={src}
-        className={"card-img inverted"}
-        alt={title}
-        height={height}
-      />
-    );
+    return <img src={src} className={"card-img inverted"} alt={title} />;
   } else {
-    return <img src={src} className={"card-img"} alt={title} height={height} />;
+    return <img src={src} className={"card-img"} alt={title} />;
   }
 }
 
@@ -108,19 +92,20 @@ export function Card(props: {
   }
 
   return (
-    <div className={"card"}>
+    <Grid className={"card"}>
       <CardTitle
         card={card}
         inverted={props.inverted ?? false}
         ineffable={props.ineffable ?? false}
       />
-      <CardImg
-        src={card?.source}
-        title={card?.title}
-        inverted={props.inverted}
-        ineffable={props.ineffable}
-        height={props.height}
-      />
-    </div>
+      <div>
+        <CardImg
+          src={card?.source}
+          title={card?.title}
+          inverted={props.inverted}
+          ineffable={props.ineffable}
+        />
+      </div>
+    </Grid>
   );
 }

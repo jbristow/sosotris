@@ -10,13 +10,11 @@ This app should be used for entertainment purposes only, and is not to be taken 
 
 ## Running Locally
 
-* Install yarn
-* `yarn install`
-* `yarn run dev`
-
+- Install yarn
+- `yarn install`
+- `yarn run dev`
 
 [1]: https://shop.arcdream.com/products/the-king-in-yellow-tarot-deck
 [2]: https://arcdream.com/
 [3]: https://luciellaes.itch.io/rider-waite-smith-tarot-cards-cc0
 [4]: https://upload.wikimedia.org/wikipedia/commons/9/99/The_Pictorial_Key_to_the_Tarot.pdf
-
