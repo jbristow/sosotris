@@ -1,6 +1,7 @@
 import "./App.css";
 import emperor from "./assets/cards/IV_L_Empereur.jpg";
 import { CardRole } from "./CardRole.tsx";
+import { Card } from "./Card.tsx";
 import { unshuffled } from "./CardData.tsx";
 import { Box, Button, Grid } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -19,25 +20,48 @@ function shuffle<T>(array: T[]) {
   return newArray;
 }
 
+function IneffableOverlay({ ineffable }: { ineffable: number }) {
+  if (ineffable > 12) {
+    return <Card ineffable={false} inverted={false} />;
+  } else {
+    return <></>;
+  }
+}
+
 function App() {
   const cards = shuffle(unshuffled());
   const ineffable = Math.floor(Math.random() * cards.length);
+
+  const rotation = Math.floor(Math.random() * 20) + 50;
 
   return (
     <>
       <Grid container>
         <Grid size={12} display="flex" justifyContent="center">
-          <CardRole
-            title={"Signifier"}
-            ord={1}
-            description={
-              "The card chosen by the querent to suggest the situation."
-            }
-            card={cards[0]}
-            ineffable={ineffable === 0 || ineffable > 12}
-          />
+          <div style={{ position: "relative" }}>
+            <CardRole
+              title={"Signifier"}
+              ord={1}
+              description={
+                "The card chosen by the querent to suggest the situation."
+              }
+              card={cards[0]}
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: "20%",
+                left: "15%",
+                width: "80%",
+                transform: `rotate(${rotation}deg)`,
+              }}
+            >
+              <IneffableOverlay ineffable={ineffable} />
+            </div>
+          </div>
         </Grid>
         <Grid display="flex" justifyContent="center" size={9}>
+          "
           <CardRole
             title={"Mask"}
             ord={2}
