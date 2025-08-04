@@ -61,7 +61,6 @@ function App() {
           </div>
         </Grid>
         <Grid display="flex" justifyContent="center" size={9}>
-          "
           <CardRole
             title={"Mask"}
             ord={2}
