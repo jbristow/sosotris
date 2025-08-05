@@ -1,23 +1,44 @@
 import { Card } from "./Card.tsx";
 import { Box, Tooltip, Typography } from "@mui/material";
+import type { CardData } from "./CardData.tsx";
 
-export function CardRole(props: {
-  title: string;
-  ord: number;
-  description: string;
-  card?: string;
-  ineffable?: boolean;
+function CardRoleTitle(props: {
+  title: string | undefined;
+  description: string | undefined;
 }) {
-  const inverted = Math.random() * 3 > 2;
-  return (
-    <Box className={"card-role"}>
+  if (props.description && props.title) {
+    return (
       <Tooltip title={props.description} arrow placement="top-start">
         <Typography className="card-role-title">{props.title}</Typography>
       </Tooltip>
+    );
+  } else if (props.title) {
+    return <Typography className="card-role-title">{props.title}</Typography>;
+  } else {
+    return <></>;
+  }
+}
+
+export function CardRole({
+  title,
+  description,
+  card,
+  ineffable,
+  showCardTitle = true,
+}: {
+  title?: string;
+  description?: string;
+  card?: CardData;
+  ineffable?: boolean;
+  showCardTitle?: boolean;
+}) {
+  return (
+    <Box className={"card-role"}>
+      <CardRoleTitle title={title} description={description} />
       <Card
-        id={props.card}
-        inverted={inverted ?? false}
-        ineffable={props.ineffable ?? false}
+        card={card}
+        ineffable={ineffable ?? false}
+        showCardTitle={showCardTitle}
       />
     </Box>
   );

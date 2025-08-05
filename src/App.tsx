@@ -1,37 +1,44 @@
 import "./App.css";
-import emperor from "./assets/cards/IV_L_Empereur.jpg";
 import { CardRole } from "./CardRole.tsx";
 import { Card } from "./Card.tsx";
-import { unshuffled } from "./CardData.tsx";
+import { Deck } from "./CardData.tsx";
 import { Box, Button, Grid } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-function shuffle<T>(array: T[]) {
-  // Create a shallow copy to avoid modifying the original array in place
-  const newArray = [...array];
-
-  for (let i = newArray.length - 1; i > 0; i--) {
-    // Generate a random index from 0 to i (inclusive)
-    const j = Math.floor(Math.random() * (i + 1));
-
-    // Swap elements at index i and j
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-}
-
-function IneffableOverlay({ ineffable }: { ineffable: number }) {
-  if (ineffable > 12) {
-    return <Card ineffable={false} inverted={false} />;
+function IneffableOverlay({
+  ineffable,
+  rotation,
+}: {
+  ineffable: boolean;
+  rotation: number;
+}) {
+  if (ineffable) {
+    return (
+      <div
+        style={{
+          position: "absolute",
+          top: "30%",
+          left: "12%",
+          width: "80%",
+          transform: `rotate(${rotation}deg)`,
+        }}
+      >
+        <Card ineffable={false} inverted={false} />
+      </div>
+    );
   } else {
     return <></>;
   }
 }
 
 function App() {
-  const cards = shuffle(unshuffled());
-  const ineffable = Math.floor(Math.random() * cards.length);
+  const deck = new Deck();
+  const emperor = deck.remove("Le Empereur")!;
 
+  deck.shuffle();
+  const signifier = deck.pop();
+  const cards = deck.deal(12);
+  const ineffableSeen = cards.findIndex((card) => card === deck.ineffable) >= 0;
   const rotation = Math.floor(Math.random() * 20) + 50;
 
   return (
@@ -41,134 +48,112 @@ function App() {
           <div style={{ position: "relative" }}>
             <CardRole
               title={"Signifier"}
-              ord={1}
               description={
                 "The card chosen by the querent to suggest the situation."
               }
-              card={cards[0]}
+              card={signifier}
             />
-            <div
-              style={{
-                position: "absolute",
-                top: "20%",
-                left: "15%",
-                width: "80%",
-                transform: `rotate(${rotation}deg)`,
-              }}
-            >
-              <IneffableOverlay ineffable={ineffable} />
-            </div>
+
+            <IneffableOverlay ineffable={!ineffableSeen} rotation={rotation} />
           </div>
         </Grid>
         <Grid display="flex" justifyContent="center" size={9}>
           <CardRole
             title={"Mask"}
-            ord={2}
             description={
               "This is how the querent presents themselves to others."
             }
-            card={cards[1]}
-            ineffable={ineffable === 1}
+            card={cards[0]}
+            ineffable={deck.ineffable === cards[0]}
           />
           <CardRole
             title={"Performance"}
-            ord={3}
             description={
               "The events and other factors immediately around the situation."
             }
-            card={cards[2]}
-            ineffable={ineffable === 2}
+            card={cards[1]}
+            ineffable={deck.ineffable === cards[1]}
           />
           <CardRole
             title={"Audience"}
-            ord={4}
             description={"The people immediately surrounding the situation."}
-            card={cards[3]}
-            ineffable={ineffable === 3}
+            card={cards[2]}
+            ineffable={deck.ineffable === cards[2]}
           />
         </Grid>
         <Grid>
           <CardRole
             title={"Rising Action"}
-            ord={10}
             description={"The next phase of the situation."}
-            card={cards[9]}
-            ineffable={ineffable === 9}
+            card={cards[8]}
+            ineffable={deck.ineffable === cards[8]}
           />
         </Grid>
         <Grid size={9} display="flex" justifyContent="center">
           <CardRole
             title={"Unconscious"}
-            ord={5}
             description={
               "The inner nature of the querent as it relates to the situation."
             }
-            card={cards[4]}
-            ineffable={ineffable === 4}
+            card={cards[3]}
+            ineffable={deck.ineffable === cards[3]}
           />
           <CardRole
             title={"Actor"}
-            ord={6}
             description={
               "How the querent perceives themselves as relates to the situation."
             }
-            card={cards[5]}
-            ineffable={ineffable === 5}
+            card={cards[4]}
+            ineffable={deck.ineffable === cards[4]}
           />
         </Grid>
         <Grid>
           <CardRole
             title={"Fate"}
-            ord={11}
             description={"That which cannot be changed."}
-            card={cards[10]}
+            card={cards[9]}
           />
         </Grid>
         <Grid size={9} display="flex" justifyContent="center">
           <CardRole
             title={"Script"}
-            ord={7}
             description={
               "The factors that brought the situation to its present state."
             }
-            card={cards[6]}
-            ineffable={ineffable === 6}
+            card={cards[5]}
+            ineffable={deck.ineffable === cards[5]}
           />
         </Grid>
         <Grid>
           <CardRole
             title={"Revelation"}
-            ord={12}
             description={"That which will be revealed."}
-            card={cards[11]}
-            ineffable={ineffable === 11}
+            card={cards[10]}
+            ineffable={deck.ineffable === cards[10]}
           />
         </Grid>
         <Grid size={9} display="flex" justifyContent="center">
           <CardRole
             title={"Stage"}
-            ord={8}
             description={
               "The backdrop of the situation. This concerns factors less visible than the Performance but sometimes more crucial."
             }
-            card={cards[7]}
-            ineffable={ineffable === 7}
+            card={cards[6]}
+            ineffable={deck.ineffable === cards[6]}
           />
           <CardRole
             title={"Unexpected"}
-            ord={9}
             description={"A surprise that lies in wait."}
-            card={cards[8]}
-            ineffable={ineffable === 8}
+            card={cards[7]}
+            ineffable={deck.ineffable === cards[7]}
           />
         </Grid>
         <Grid>
           <CardRole
             title={"Denouement"}
-            ord={13}
             description={"The final outcome of the situation."}
-            card={cards[12]}
-            ineffable={ineffable === 12}
+            card={cards[11]}
+            ineffable={deck.ineffable === cards[11]}
           />
         </Grid>
       </Grid>
@@ -182,17 +167,7 @@ function App() {
         }}
       >
         <Grid size={3}>
-          <Box className="card-role" display="flex" justifyContent="center">
-            <Grid className="card">
-              <div>
-                <img
-                  src={emperor}
-                  className={"card-img"}
-                  alt={"IV: L'Empereur"}
-                />
-              </div>
-            </Grid>
-          </Box>
+          <CardRole card={emperor} showCardTitle={false} />
         </Grid>
       </div>
       <Box

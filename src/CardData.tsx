@@ -75,19 +75,93 @@ import ivDenier from "./assets/cards/IV_de_Denier.jpg";
 import iiiDenier from "./assets/cards/III_de_Denier.jpg";
 import iiDenier from "./assets/cards/II_de_Denier.jpg";
 import iDenier from "./assets/cards/I_de_Denier.jpg";
+import lEmpereur from "./assets/cards/IV_L_Empereur.jpg";
 
 export interface CardData {
   title: string;
   source: string;
   meaning: string;
   reversed: string;
+  isReversed?: boolean;
 }
 
 export function unshuffled(): string[] {
   return Object.keys(CARD_DB);
 }
+function shuffle<T>(array: T[]) {
+  // Create a shallow copy to avoid modifying the original array in place
+  const newArray = [...array];
+
+  for (let i = newArray.length - 1; i > 0; i--) {
+    // Generate a random index from 0 to i (inclusive)
+    const j = Math.floor(Math.random() * (i + 1));
+
+    // Swap elements at index i and j
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
+export function fetchCard(id: string | null = null): CardData | null {
+  if (id == null) {
+    return null;
+  } else {
+    return CARD_DB[id];
+  }
+}
+
+export class Deck {
+  private cards: string[];
+  private _ineffable: string;
+  constructor() {
+    this.cards = shuffle(Object.keys(CARD_DB));
+    this._ineffable = this.cards[Math.floor(Math.random() * this.cards.length)];
+  }
+  get(id: number): string {
+    return this.cards[id];
+  }
+
+  get ineffable() {
+    return CARD_DB[this._ineffable];
+  }
+
+  remove(id: string): CardData | undefined {
+    const cardId = this.cards.find((card) => card === id);
+    if (cardId == null) {
+      return undefined;
+    }
+    const card = CARD_DB[cardId];
+    this.cards = this.cards.filter((card) => card !== id);
+    return card;
+  }
+
+  pop(): CardData {
+    const card = this.cards.pop()!;
+    this._ineffable = this.cards[Math.floor(Math.random() * this.cards.length)];
+    return CARD_DB[card];
+  }
+
+  shuffle() {
+    this.cards = shuffle(this.cards);
+  }
+
+  deal(n: number): CardData[] {
+    const cardList = this.cards.slice(0, n).map((card) => CARD_DB[card]);
+    cardList.forEach((card) => {
+      card.isReversed = Math.random() > 0.7;
+    });
+    return cardList;
+  }
+}
 
 export const CARD_DB: { [key: string]: CardData } = {
+  "Le Empereur": {
+    title: "IV: L'Empereur",
+    source: lEmpereur,
+    meaning:
+      " Stability, power, protection, realisation; a great person; aid, reason, conviction; also authority and will.",
+    reversed:
+      "Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.",
+  },
   "Le Mat": {
     title: "Le Mat",
     source: leMat,
