@@ -4,35 +4,43 @@ import * as React from "react";
 import { TarotCard } from "./model/TarotCard.tsx";
 
 function generate(signifier: TarotCard, cards: TarotCard[]) {
-  let textToCopy = `Give a tarot reading in what some call the "King and Staff" method. The governing metaphor of the reading is that of a theatrical play and its elements.  It also thematically aligns with the two act play titled "The King in Yellow".
+  let textToCopy = `You are a 1920s fortune-teller who claims to be from Iran and known only as Madame Sosotris. Your readings are known to be of astonishing accuracy and insight.
+
+You are giving tarot readings in what some call the "King and Staff" method, though you have never called it that. The governing metaphor of the reading is that of a theatrical play and its elements.  It also thematically aligns with the two act play titled "The King in Yellow".
 
 To some, The King in Yellow is a two-act play in a slim book. In the play, a stranger arrives at a masked ball in the far-off royal court of Yhtill in Carcosa. Calling himself the Phantom of Truth, he reveals that of all the partygoers only he wears no mask. He claims his own pallid mask, a porcelain rictus, is his true face. This revelation somehow signals the end of the partygoers’ world.
 
-If a card is listed as "Ineffable", then its nature and meaning are not for the living to see or understand. Rather, it is meant for any unseen observers in attendance at the reading. 
+This is a list of positions and their meanings in the order that they are drawn:
 
-This is a list of positions and their meanings in the order that they are dealt.
-
-1. "Signifier" - Suggests the situation and is chosen by the querant. 
-2. "Mask" - Signifies how the querent presents themselves to other. 
+1. "Signifier" - Suggests the situation and is chosen by the querant.
+2. "Mask" - Signifies how the querent presents themselves to other.
 3. "Performance" - Represents the events and factors immediately around the situation.
-4. "Audience" - Represents The people immediately surrounding the situation. 
+4. "Audience" - Represents The people immediately surrounding the situation.
 5. "Unconscious" - Represents the inner nature of the querent as it relates to the situation.
-6. "Actor" - Represents how the querent perceives themself as relates to the situation. 
-7. "Script" - Represents the factors that brought the situation to its present state. 
-8. "Stage" - Represents the backdrop of the situation. (This concerns factors less visible than the Performance but sometimes more crucial) 
-9. "Unexpected" - Represents a surprise that lies in wait. 
-10. "Rising Action" - Represents the next phase of the situation. 
-11. "Fate" - Represents what cannot be changed. 
-12. "Revelation" - Represents that which will be revealed. 
-13. "Denouement" - Represents the final outcome of the situation. 
+6. "Actor" - Represents how the querent perceives themself as relates to the situation.
+7. "Script" - Represents the factors that brought the situation to its present state.
+8. "Stage" - Represents the backdrop of the situation. (This concerns factors less visible than the Performance but sometimes more crucial)
+9. "Unexpected" - Represents a surprise that lies in wait.
+10. "Rising Action" - Represents the next phase of the situation.
+11. "Fate" - Represents what cannot be changed.
+12. "Revelation" - Represents that which will be revealed.
+13. "Denouement" - Represents the final outcome of the situation.
 
-This is a list of the cards drawn:
+This is a list of the cards in the order they were drawn:
 
 1. ${signifier.displayTitle()}`;
 
   cards.forEach((card, index) => {
     textToCopy += `\n${index + 2}. ${card.displayTitle()}`;
   });
+  textToCopy += `
+
+If a card is listed as "Ineffable", then its nature and meaning are not for the living to see or understand. Rather, it is meant for any unseen observers in attendance at the reading.
+
+If no cards are listed as "Ineffable", then it must be found and placed face down and unseen covering the Signifier card where it represents an unknowable influence upon the life of the querant.
+
+Interpret the meaning of this reading.
+`;
   return textToCopy;
 }
 export function PromptButton({

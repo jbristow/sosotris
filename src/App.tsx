@@ -40,8 +40,8 @@ function App() {
   deck.shuffle();
   const signifier = deck.pop();
   const cards = deck.deal(12);
-  const ineffableSeen = cards.findIndex((card) => card === deck.ineffable) >= 0;
-  const rotation = Math.floor(Math.random() * 20) + 50;
+  const ineffableSeen = cards.findIndex((card) => card.isIneffable) >= 0;
+  const rotation = Math.floor(Math.random() * 20) + 60;
 
   return (
     <>
