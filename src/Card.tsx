@@ -1,36 +1,12 @@
 import sign from "./assets/cards/CardBacks.jpg";
-import { type CardData } from "./CardData.tsx";
 import { Tooltip } from "@mui/material";
-
-function meaning(card: CardData, ineffable: boolean) {
-  if (ineffable) {
-    return "This card's nature and meaning are not for the living to see or understand. Rather, it is meant for any unseen observers in attendance at the reading.";
-  } else if ((card.isReversed ?? false) && card?.reversed != null) {
-    return card.reversed;
-  } else if (card.meaning != null) {
-    return card.meaning;
-  } else {
-    return "Unknown";
-  }
-}
-
-function title(card: CardData, ineffable: boolean) {
-  if (ineffable) {
-    return "Ineffable";
-  } else if (card.isReversed ?? false) {
-    return card.title + " (Reversed)";
-  } else {
-    return card.title;
-  }
-}
+import { TarotCard } from "./model/TarotCard.tsx";
 
 function CardTitle({
   card,
-  ineffable,
   showCardTitle = true,
 }: {
-  card?: CardData;
-  ineffable: boolean;
+  card?: TarotCard;
   showCardTitle?: boolean;
 }) {
   if (!showCardTitle || card == null || card.title == null) {
@@ -42,51 +18,48 @@ function CardTitle({
       <Tooltip
         title={
           <div style={{ fontSize: "1.25em" }} className={"card-tooltip-title"}>
-            {meaning(card, ineffable)}
+            {card.displayMeaning()}
           </div>
         }
         arrow
         placement="bottom-start"
       >
-        <div className={"card-tooltip"}>{title(card, ineffable)}</div>
+        <div className={"card-tooltip"}>{card.displayTitle()}</div>
       </Tooltip>
     </div>
   );
 }
 
-function CardImg({ card, ineffable }: { card?: CardData; ineffable: boolean }) {
+function CardImg({ card }: { card?: TarotCard }) {
   if (card == null || card.source == null) {
     return <img src={sign} className={"card-img"} alt="Have You Found It?" />;
-  } else if (ineffable) {
+  }
+
+  if (card.isIneffable) {
     return <img src={sign} className={"card-img"} alt="Ineffable" />;
-  } else if (card.isReversed ?? false) {
+  }
+
+  if (card.isReversed) {
     return (
       <img src={card.source} className={"card-img inverted"} alt={card.title} />
     );
-  } else {
-    return <img src={card.source} className={"card-img"} alt={card.title} />;
   }
+
+  return <img src={card.source} className={"card-img"} alt={card.title} />;
 }
 
 export function Card({
   card,
-  ineffable,
   showCardTitle = true,
 }: {
-  card?: CardData;
-  inverted: boolean;
-  ineffable: boolean;
+  card?: TarotCard;
   showCardTitle?: boolean;
 }) {
   return (
     <div className={"card"}>
-      <CardTitle
-        card={card}
-        ineffable={ineffable}
-        showCardTitle={showCardTitle}
-      />
+      <CardTitle card={card} showCardTitle={showCardTitle} />
       <div>
-        <CardImg card={card} ineffable={ineffable} />
+        <CardImg card={card} />
       </div>
     </div>
   );

@@ -1,9 +1,11 @@
 import "./App.css";
 import { CardRole } from "./CardRole.tsx";
 import { Card } from "./Card.tsx";
-import { Deck } from "./CardData.tsx";
 import { Box, Button, Grid } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { PromptButton } from "./PromptButton.tsx";
+import { Deck } from "./model/Deck.tsx";
+import { CARD_DB } from "./model/CardData.tsx";
 
 function IneffableOverlay({
   ineffable,
@@ -23,7 +25,7 @@ function IneffableOverlay({
           transform: `rotate(${rotation}deg)`,
         }}
       >
-        <Card ineffable={false} inverted={false} />
+        <Card />
       </div>
     );
   } else {
@@ -32,7 +34,7 @@ function IneffableOverlay({
 }
 
 function App() {
-  const deck = new Deck();
+  const deck = new Deck(CARD_DB);
   const emperor = deck.remove("Le Empereur")!;
 
   deck.shuffle();
@@ -44,7 +46,7 @@ function App() {
   return (
     <>
       <Grid container>
-        <Grid size={12} display="flex" justifyContent="center">
+        <Grid size={9} display="flex" justifyContent="center">
           <div style={{ position: "relative" }}>
             <CardRole
               title={"Signifier"}
@@ -64,7 +66,6 @@ function App() {
               "This is how the querent presents themselves to others."
             }
             card={cards[0]}
-            ineffable={deck.ineffable === cards[0]}
           />
           <CardRole
             title={"Performance"}
@@ -72,13 +73,11 @@ function App() {
               "The events and other factors immediately around the situation."
             }
             card={cards[1]}
-            ineffable={deck.ineffable === cards[1]}
           />
           <CardRole
             title={"Audience"}
             description={"The people immediately surrounding the situation."}
             card={cards[2]}
-            ineffable={deck.ineffable === cards[2]}
           />
         </Grid>
         <Grid>
@@ -86,7 +85,6 @@ function App() {
             title={"Rising Action"}
             description={"The next phase of the situation."}
             card={cards[8]}
-            ineffable={deck.ineffable === cards[8]}
           />
         </Grid>
         <Grid size={9} display="flex" justifyContent="center">
@@ -96,7 +94,6 @@ function App() {
               "The inner nature of the querent as it relates to the situation."
             }
             card={cards[3]}
-            ineffable={deck.ineffable === cards[3]}
           />
           <CardRole
             title={"Actor"}
@@ -104,7 +101,6 @@ function App() {
               "How the querent perceives themselves as relates to the situation."
             }
             card={cards[4]}
-            ineffable={deck.ineffable === cards[4]}
           />
         </Grid>
         <Grid>
@@ -121,7 +117,6 @@ function App() {
               "The factors that brought the situation to its present state."
             }
             card={cards[5]}
-            ineffable={deck.ineffable === cards[5]}
           />
         </Grid>
         <Grid>
@@ -129,7 +124,6 @@ function App() {
             title={"Revelation"}
             description={"That which will be revealed."}
             card={cards[10]}
-            ineffable={deck.ineffable === cards[10]}
           />
         </Grid>
         <Grid size={9} display="flex" justifyContent="center">
@@ -139,13 +133,11 @@ function App() {
               "The backdrop of the situation. This concerns factors less visible than the Performance but sometimes more crucial."
             }
             card={cards[6]}
-            ineffable={deck.ineffable === cards[6]}
           />
           <CardRole
             title={"Unexpected"}
             description={"A surprise that lies in wait."}
             card={cards[7]}
-            ineffable={deck.ineffable === cards[7]}
           />
         </Grid>
         <Grid>
@@ -153,7 +145,6 @@ function App() {
             title={"Denouement"}
             description={"The final outcome of the situation."}
             card={cards[11]}
-            ineffable={deck.ineffable === cards[11]}
           />
         </Grid>
       </Grid>
@@ -192,6 +183,7 @@ function App() {
           GitHub
         </Button>
       </Box>
+      <PromptButton signifier={signifier} cards={cards} />
     </>
   );
 }

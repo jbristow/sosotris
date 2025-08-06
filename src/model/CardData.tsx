@@ -1,157 +1,82 @@
-import leMat from "./assets/cards/Le_Mat.jpg";
-import leBateleur from "./assets/cards/I_Le_Bateleur.jpg";
-import junon from "./assets/cards/II_Junon.jpg";
-import lImperatrice from "./assets/cards/III_L_Imperatrice.jpg";
-import jupiter from "./assets/cards/V_Jupiter.jpg";
-import lesAmoureux from "./assets/cards/VI_Les_Amoureux.jpg";
-import leChariot from "./assets/cards/VII_Le_Chariot.jpg";
-import laForce from "./assets/cards/VIII_La_Force.jpg";
-import lErmite from "./assets/cards/IX_L_Ermite.jpg";
-import laRoueDeFortune from "./assets/cards/X_La_Roue_de_Fortune.jpg";
-import laJustice from "./assets/cards/XI_La_Justice.jpg";
-import lePendu from "./assets/cards/XII_Le_Pendu.jpg";
-import laMort from "./assets/cards/XIII_La_Mort.jpg";
-import temperance from "./assets/cards/XIV_Temperance.jpg";
-import leDiable from "./assets/cards/XV_Le_Diable.jpg";
-import laMaisonDieu from "./assets/cards/XVI_La_Maison_Dieu.jpg";
-import lEtoile from "./assets/cards/XVII_L_Etoile.jpg";
-import laLune from "./assets/cards/XVIII_La_Lune.jpg";
-import leSoleil from "./assets/cards/XIX_Le_Soleil.jpg";
-import leJugement from "./assets/cards/XX_Le_Jugement.jpg";
-import leMonde from "./assets/cards/XXI_Le_Monde.jpg";
-import roiEpee from "./assets/cards/Roi_d_Epee.jpg";
-import reineEpee from "./assets/cards/Reine_d_Epee.jpg";
-import chevalierEpee from "./assets/cards/Chevalier_d_Epee.jpg";
-import valetEpee from "./assets/cards/Valet_d_Epee.jpg";
-import xEpee from "./assets/cards/X_d_Epee.jpg";
-import ixEpee from "./assets/cards/IX_d_Epee.jpg";
-import viiiEpee from "./assets/cards/VIII_d_Epee.jpg";
-import viiEpee from "./assets/cards/VII_d_Epee.jpg";
-import viEpee from "./assets/cards/VI_d_Epee.jpg";
-import vEpee from "./assets/cards/V_d_Epee.jpg";
-import ivEpee from "./assets/cards/IV_d_Epee.jpg";
-import iiiEpee from "./assets/cards/III_d_Epee.jpg";
-import iiEpee from "./assets/cards/II_d_Epee.jpg";
-import iEpee from "./assets/cards/I_d_Epee.jpg";
-import roiBaton from "./assets/cards/Roi_de_Baton.jpg";
-import reineBaton from "./assets/cards/Reine_de_Baton.jpg";
-import chevalierBaton from "./assets/cards/Chevalier_de_Baton.jpg";
-import valetBaton from "./assets/cards/Valet_de_Baton.jpg";
-import xBaton from "./assets/cards/X_de_Baton.jpg";
-import ixBaton from "./assets/cards/IX_de_Baton.jpg";
-import viiiBaton from "./assets/cards/VIII_de_Baton.jpg";
-import viiBaton from "./assets/cards/VII_de_Baton.jpg";
-import viBaton from "./assets/cards/VI_de_Baton.jpg";
-import vBaton from "./assets/cards/V_de_Baton.jpg";
-import ivBaton from "./assets/cards/IV_de_Baton.jpg";
-import iiiBaton from "./assets/cards/III_de_Baton.jpg";
-import iiBaton from "./assets/cards/II_de_Baton.jpg";
-import iBaton from "./assets/cards/I_de_Baton.jpg";
-import roiCoupe from "./assets/cards/Roi_de_Coupe.jpg";
-import reineCoupe from "./assets/cards/Reine_de_Coupe.jpg";
-import chevalierCoupe from "./assets/cards/Chevalier_de_Coupe.jpg";
-import valetCoupe from "./assets/cards/Valet_de_Coupe.jpg";
-import xCoupe from "./assets/cards/X_de_Coupe.jpg";
-import ixCoupe from "./assets/cards/IX_de_Coupe.jpg";
-import viiiCoupe from "./assets/cards/VIII_de_Coupe.jpg";
-import viiCoupe from "./assets/cards/VII_de_Coupe.jpg";
-import viCoupe from "./assets/cards/VI_de_Coupe.jpg";
-import vCoupe from "./assets/cards/V_de_Coupe.jpg";
-import ivCoupe from "./assets/cards/IV_de_Coupe.jpg";
-import iiiCoupe from "./assets/cards/III_de_Coupe.jpg";
-import iiCoupe from "./assets/cards/II_de_Coupe.jpg";
-import iCoupe from "./assets/cards/I_de_Coupe.jpg";
-import roiDenier from "./assets/cards/Roi_de_Denier.jpg";
-import reineDenier from "./assets/cards/Reine_de_Denier.jpg";
-import chevalierDenier from "./assets/cards/Chevalier_de_Denier.jpg";
-import valetDenier from "./assets/cards/Valet_de_Denier.jpg";
-import xDenier from "./assets/cards/X_de_Denier.jpg";
-import ixDenier from "./assets/cards/IX_de_Denier.jpg";
-import viiiDenier from "./assets/cards/VIII_de_Denier.jpg";
-import viiDenier from "./assets/cards/VII_de_Denier.jpg";
-import viDenier from "./assets/cards/VI_de_Denier.jpg";
-import vDenier from "./assets/cards/V_de_Denier.jpg";
-import ivDenier from "./assets/cards/IV_de_Denier.jpg";
-import iiiDenier from "./assets/cards/III_de_Denier.jpg";
-import iiDenier from "./assets/cards/II_de_Denier.jpg";
-import iDenier from "./assets/cards/I_de_Denier.jpg";
-import lEmpereur from "./assets/cards/IV_L_Empereur.jpg";
-
-export interface CardData {
-  title: string;
-  source: string;
-  meaning: string;
-  reversed: string;
-  isReversed?: boolean;
-}
-
-export function unshuffled(): string[] {
-  return Object.keys(CARD_DB);
-}
-function shuffle<T>(array: T[]) {
-  // Create a shallow copy to avoid modifying the original array in place
-  const newArray = [...array];
-
-  for (let i = newArray.length - 1; i > 0; i--) {
-    // Generate a random index from 0 to i (inclusive)
-    const j = Math.floor(Math.random() * (i + 1));
-
-    // Swap elements at index i and j
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-}
-export function fetchCard(id: string | null = null): CardData | null {
-  if (id == null) {
-    return null;
-  } else {
-    return CARD_DB[id];
-  }
-}
-
-export class Deck {
-  private cards: string[];
-  private _ineffable: string;
-  constructor() {
-    this.cards = shuffle(Object.keys(CARD_DB));
-    this._ineffable = this.cards[Math.floor(Math.random() * this.cards.length)];
-  }
-  get(id: number): string {
-    return this.cards[id];
-  }
-
-  get ineffable() {
-    return CARD_DB[this._ineffable];
-  }
-
-  remove(id: string): CardData | undefined {
-    const cardId = this.cards.find((card) => card === id);
-    if (cardId == null) {
-      return undefined;
-    }
-    const card = CARD_DB[cardId];
-    this.cards = this.cards.filter((card) => card !== id);
-    return card;
-  }
-
-  pop(): CardData {
-    const card = this.cards.pop()!;
-    this._ineffable = this.cards[Math.floor(Math.random() * this.cards.length)];
-    return CARD_DB[card];
-  }
-
-  shuffle() {
-    this.cards = shuffle(this.cards);
-  }
-
-  deal(n: number): CardData[] {
-    const cardList = this.cards.slice(0, n).map((card) => CARD_DB[card]);
-    cardList.forEach((card) => {
-      card.isReversed = Math.random() > 0.7;
-    });
-    return cardList;
-  }
-}
+import leMat from "../assets/cards/Le_Mat.jpg";
+import leBateleur from "../assets/cards/I_Le_Bateleur.jpg";
+import junon from "../assets/cards/II_Junon.jpg";
+import lImperatrice from "../assets/cards/III_L_Imperatrice.jpg";
+import jupiter from "../assets/cards/V_Jupiter.jpg";
+import lesAmoureux from "../assets/cards/VI_Les_Amoureux.jpg";
+import leChariot from "../assets/cards/VII_Le_Chariot.jpg";
+import laForce from "../assets/cards/VIII_La_Force.jpg";
+import lErmite from "../assets/cards/IX_L_Ermite.jpg";
+import laRoueDeFortune from "../assets/cards/X_La_Roue_de_Fortune.jpg";
+import laJustice from "../assets/cards/XI_La_Justice.jpg";
+import lePendu from "../assets/cards/XII_Le_Pendu.jpg";
+import laMort from "../assets/cards/XIII_La_Mort.jpg";
+import temperance from "../assets/cards/XIV_Temperance.jpg";
+import leDiable from "../assets/cards/XV_Le_Diable.jpg";
+import laMaisonDieu from "../assets/cards/XVI_La_Maison_Dieu.jpg";
+import lEtoile from "../assets/cards/XVII_L_Etoile.jpg";
+import laLune from "../assets/cards/XVIII_La_Lune.jpg";
+import leSoleil from "../assets/cards/XIX_Le_Soleil.jpg";
+import leJugement from "../assets/cards/XX_Le_Jugement.jpg";
+import leMonde from "../assets/cards/XXI_Le_Monde.jpg";
+import roiEpee from "../assets/cards/Roi_d_Epee.jpg";
+import reineEpee from "../assets/cards/Reine_d_Epee.jpg";
+import chevalierEpee from "../assets/cards/Chevalier_d_Epee.jpg";
+import valetEpee from "../assets/cards/Valet_d_Epee.jpg";
+import xEpee from "../assets/cards/X_d_Epee.jpg";
+import ixEpee from "../assets/cards/IX_d_Epee.jpg";
+import viiiEpee from "../assets/cards/VIII_d_Epee.jpg";
+import viiEpee from "../assets/cards/VII_d_Epee.jpg";
+import viEpee from "../assets/cards/VI_d_Epee.jpg";
+import vEpee from "../assets/cards/V_d_Epee.jpg";
+import ivEpee from "../assets/cards/IV_d_Epee.jpg";
+import iiiEpee from "../assets/cards/III_d_Epee.jpg";
+import iiEpee from "../assets/cards/II_d_Epee.jpg";
+import iEpee from "../assets/cards/I_d_Epee.jpg";
+import roiBaton from "../assets/cards/Roi_de_Baton.jpg";
+import reineBaton from "../assets/cards/Reine_de_Baton.jpg";
+import chevalierBaton from "../assets/cards/Chevalier_de_Baton.jpg";
+import valetBaton from "../assets/cards/Valet_de_Baton.jpg";
+import xBaton from "../assets/cards/X_de_Baton.jpg";
+import ixBaton from "../assets/cards/IX_de_Baton.jpg";
+import viiiBaton from "../assets/cards/VIII_de_Baton.jpg";
+import viiBaton from "../assets/cards/VII_de_Baton.jpg";
+import viBaton from "../assets/cards/VI_de_Baton.jpg";
+import vBaton from "../assets/cards/V_de_Baton.jpg";
+import ivBaton from "../assets/cards/IV_de_Baton.jpg";
+import iiiBaton from "../assets/cards/III_de_Baton.jpg";
+import iiBaton from "../assets/cards/II_de_Baton.jpg";
+import iBaton from "../assets/cards/I_de_Baton.jpg";
+import roiCoupe from "../assets/cards/Roi_de_Coupe.jpg";
+import reineCoupe from "../assets/cards/Reine_de_Coupe.jpg";
+import chevalierCoupe from "../assets/cards/Chevalier_de_Coupe.jpg";
+import valetCoupe from "../assets/cards/Valet_de_Coupe.jpg";
+import xCoupe from "../assets/cards/X_de_Coupe.jpg";
+import ixCoupe from "../assets/cards/IX_de_Coupe.jpg";
+import viiiCoupe from "../assets/cards/VIII_de_Coupe.jpg";
+import viiCoupe from "../assets/cards/VII_de_Coupe.jpg";
+import viCoupe from "../assets/cards/VI_de_Coupe.jpg";
+import vCoupe from "../assets/cards/V_de_Coupe.jpg";
+import ivCoupe from "../assets/cards/IV_de_Coupe.jpg";
+import iiiCoupe from "../assets/cards/III_de_Coupe.jpg";
+import iiCoupe from "../assets/cards/II_de_Coupe.jpg";
+import iCoupe from "../assets/cards/I_de_Coupe.jpg";
+import roiDenier from "../assets/cards/Roi_de_Denier.jpg";
+import reineDenier from "../assets/cards/Reine_de_Denier.jpg";
+import chevalierDenier from "../assets/cards/Chevalier_de_Denier.jpg";
+import valetDenier from "../assets/cards/Valet_de_Denier.jpg";
+import xDenier from "../assets/cards/X_de_Denier.jpg";
+import ixDenier from "../assets/cards/IX_de_Denier.jpg";
+import viiiDenier from "../assets/cards/VIII_de_Denier.jpg";
+import viiDenier from "../assets/cards/VII_de_Denier.jpg";
+import viDenier from "../assets/cards/VI_de_Denier.jpg";
+import vDenier from "../assets/cards/V_de_Denier.jpg";
+import ivDenier from "../assets/cards/IV_de_Denier.jpg";
+import iiiDenier from "../assets/cards/III_de_Denier.jpg";
+import iiDenier from "../assets/cards/II_de_Denier.jpg";
+import iDenier from "../assets/cards/I_de_Denier.jpg";
+import lEmpereur from "../assets/cards/IV_L_Empereur.jpg";
+import { type CardData } from "./TarotCard.tsx";
 
 export const CARD_DB: { [key: string]: CardData } = {
   "Le Empereur": {

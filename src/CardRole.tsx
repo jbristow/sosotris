@@ -1,45 +1,40 @@
 import { Card } from "./Card.tsx";
 import { Box, Tooltip, Typography } from "@mui/material";
-import type { CardData } from "./CardData.tsx";
 
-function CardRoleTitle(props: {
-  title: string | undefined;
-  description: string | undefined;
-}) {
-  if (props.description && props.title) {
-    return (
-      <Tooltip title={props.description} arrow placement="top-start">
-        <Typography className="card-role-title">{props.title}</Typography>
-      </Tooltip>
-    );
-  } else if (props.title) {
-    return <Typography className="card-role-title">{props.title}</Typography>;
-  } else {
+import { TarotCard } from "./model/TarotCard.tsx";
+
+function CardRoleTitle(props: { title?: string; description?: string }) {
+  if (!props.description && !props.title) {
     return <></>;
   }
+
+  if (!props.description) {
+    return <Typography className="card-role-title">{props.title}</Typography>;
+  }
+
+  return (
+    <Tooltip title={props.description} arrow placement="top-start">
+      <Typography className="card-role-title">{props.title}</Typography>
+    </Tooltip>
+  );
 }
 
 export function CardRole({
   title,
   description,
   card,
-  ineffable,
   showCardTitle = true,
 }: {
   title?: string;
   description?: string;
-  card?: CardData;
+  card?: TarotCard;
   ineffable?: boolean;
   showCardTitle?: boolean;
 }) {
   return (
     <Box className={"card-role"}>
       <CardRoleTitle title={title} description={description} />
-      <Card
-        card={card}
-        ineffable={ineffable ?? false}
-        showCardTitle={showCardTitle}
-      />
+      <Card card={card} showCardTitle={showCardTitle} />
     </Box>
   );
 }
