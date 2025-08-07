@@ -1,4 +1,3 @@
-import sign from "./assets/cards/CardBacks.jpg";
 import { Tooltip } from "@mui/material";
 import { TarotCard } from "./model/TarotCard.tsx";
 
@@ -32,11 +31,19 @@ function CardTitle({
 
 function CardImg({ card }: { card?: TarotCard }) {
   if (card == null || card.source == null) {
-    return <img src={sign} className={"card-img"} alt="Have You Found It?" />;
+    return (
+      <img
+        src="/cards/CardBacks.jpg"
+        className={"card-img"}
+        alt="Have You Found It?"
+      />
+    );
   }
 
   if (card.isIneffable) {
-    return <img src={sign} className={"card-img"} alt="Ineffable" />;
+    return (
+      <img src="/cards/CardBacks.jpg" className={"card-img"} alt="Ineffable" />
+    );
   }
 
   if (card.isReversed) {

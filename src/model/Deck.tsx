@@ -3,15 +3,7 @@ import { type CardData, TarotCard, toTarotCard } from "./TarotCard.tsx";
 function shuffle<T>(array: T[]) {
   // Create a shallow copy to avoid modifying the original array in place
   const newArray = [...array];
-
-  for (let i = newArray.length - 1; i > 0; i--) {
-    // Generate a random index from 0 to i (inclusive)
-    const j = Math.floor(Math.random() * (i + 1));
-
-    // Swap elements at index i and j
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
+  return newArray.sort(() => Math.random() - 0.5);
 }
 
 export class Deck {
