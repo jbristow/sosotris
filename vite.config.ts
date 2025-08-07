@@ -4,5 +4,5 @@ import ViteYaml from "@modyfi/vite-plugin-yaml";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [ViteYaml(), react()],
+  plugins: [react(), ViteYaml()],
 });
