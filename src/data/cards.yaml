@@ -1,5 +1,5 @@
 cards:
-  Le Empereur:
+  "Le_Empereur":
     title: "IV: L'Empereur"
     source: /cards/IV_L_Empereur.jpg
     meaning: >-
@@ -8,19 +8,19 @@ cards:
     reversed: >-
       Benevolence, compassion, credit; also confusion to enemies, obstruction,
       immaturity.
-  Le Mat:
+  "Le_Mat":
     title: Le Mat
     source: /cards/Le_Mat.jpg
     meaning: "Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment."
     reversed: "Negligence, absence, distribution, carelessness, apathy, nullity, vanity."
-  "I: Le Bateleur":
+  "I_Le_Bateleur":
     title: "I: Le Bateleur"
     source: /cards/I_Le_Bateleur.jpg
     meaning: >-
       Skill, diplomacy, address, subtlety; sickness, pain, loss, disaster,
       snares of enemies; self-confidence, will; the Querent, if male.
     reversed: "Physician, Magus, mental disease, disgrace, disquiet."
-  "II: Junon":
+  "II_Junon":
     title: "II: Junon"
     source: /cards/II_Junon.jpg
     meaning: >-
@@ -28,7 +28,7 @@ cards:
       the Querent, if male; the Querent herself, if female; silence, tenacity;
       mystery, wisdom, science.
     reversed: "Passion, moral or physical ardour, conceit, surface knowledge."
-  "III: L'Imperatrice":
+  "III_L_Imperatrice":
     title: "III: L'Impératrice"
     source: /cards/III_L_Imperatrice.jpg
     meaning: >-
@@ -37,45 +37,45 @@ cards:
     reversed: >-
       Light, truth, the unravelling of involved matters, public rejoicings;
       according to another reading, vacillation.
-  "V: Jupiter":
+  "V_Jupiter":
     title: "V: Jupiter"
     source: /cards/V_Jupiter.jpg
     meaning: >-
       Marriage, alliance, captivity, servitude; by another account, mercy and
       goodness; inspiration; the man to whom the Querent has recourse.
     reversed: "Society, good understanding, concord, overkindness, weakness."
-  "VI: Les Amoureux":
+  "VI_Les_Amoureux":
     title: "VI: Les Amoureux"
     source: /cards/VI_Les_Amoureux.jpg
     meaning: "Attraction, love, beauty, trials overcome."
     reversed: >-
       Failure, foolish designs. Another account speaks of marriage frustrated
       and contrarieties of all kinds.
-  "VII: Le Chariot":
+  "VII_Le_Chariot":
     title: "VII: Le Chariot"
     source: /cards/VII_Le_Chariot.jpg
     meaning: "Succour, providence; also war, triumph, presumption, vengeance, trouble."
     reversed: "Riot, quarrel, dispute, litigation, defeat."
-  "VIII: La Force":
+  "VIII_La_Force":
     title: "VIII: La Force"
     source: /cards/VIII_La_Force.jpg
     meaning: >-
       Power, energy, action, courage, magnanimity; also complete success and
       honours.
     reversed: "Despotism, abuse of power, weakness, discord, sometimes even disgrace."
-  "IX: L'Ermite":
+  "IX_L_Ermite":
     title: "IX: L'Ermite"
     source: /cards/IX_L_Ermite.jpg
     meaning: >-
       Prudence, circumspection; also and especially treason, dissimulation,
       roguery, corruption.
     reversed: "Concealment, disguise, policy, fear, unreasoned caution."
-  "X: La Roue de Fortune":
+  "X_La_Roue_de_Fortune":
     title: "X: La Roue de Fortune"
     source: /cards/X_La_Roue_de_Fortune.jpg
     meaning: "Destiny, fortune, success, elevation, luck, felicity."
     reversed: "Increase, abundance, superfluity."
-  "XI: La Justice":
+  "XI_La_Justice":
     title: "XI: La Justice"
     source: /cards/XI_La_Justice.jpg
     meaning: >-
@@ -84,14 +84,14 @@ cards:
     reversed: >-
       Law in all its departments, legal complications, bigotry, bias, excessive
       severity.
-  "XII: Le Pendu":
+  "XII_Le_Pendu":
     title: "XII: Le Pendu"
     source: /cards/XII_Le_Pendu.jpg
     meaning: >-
       Wisdom, circumspection, discernment, trials, sacrifice, intuition,
       divination, prophecy.
     reversed: "Selfishness, the crowd, body politic."
-  "XIII: La Mort":
+  "XIII_La_Mort":
     title: "XIII: La Mort"
     source: /cards/XIII_La_Mort.jpg
     meaning: >-
@@ -99,7 +99,7 @@ cards:
       benefactor for a woman, many contrarieties; for a maid, failure of
       marriage projects.
     reversed: "Inertia, sleep, lethargy, petrifaction, somnambulism; hope destroyed."
-  "XIV: Temperance":
+  "XIV_Temperance":
     title: "XIV: Temperance"
     source: /cards/XIV_Temperance.jpg
     meaning: "Economy, moderation, frugality, management, accommodation."
@@ -107,14 +107,14 @@ cards:
       Things connected with churches, religions, sects, the priesthood,
       sometimes even the priest who will marry the Querent; also disunion,
       unfortunate combinations, competing interests.
-  "XV: Le Diable":
+  "XV_Le_Diable":
     title: "XV: Le Diable"
     source: /cards/XV_Le_Diable.jpg
     meaning: >-
       Ravage, violence, vehemence, extraordinary efforts, force, fatality; that
       which is predestined but is not for this reason evil.
     reversed: "Evil fatality, weakness, pettiness, blindness."
-  "XVI: La Maison Dieu":
+  "XVI_La_Maison_Dieu":
     title: "XVI: La Maison Dieu"
     source: /cards/XVI_La_Maison_Dieu.jpg
     meaning: >-
@@ -123,26 +123,26 @@ cards:
     reversed: >-
       According to one account, the same in a lesser degree also oppression,
       imprisonment, tyranny.
-  "XVII: L'Etoile":
+  "XVII_L_Etoile":
     title: "XVII: L'Etoile"
     source: /cards/XVII_L_Etoile.jpg
     meaning: >-
       Loss, theft, privation, abandonment; another reading says-hope and bright
       prospects
     reversed: "Arrogance, haughtiness, impotence."
-  "XVIII: La Lune":
+  "XVIII_La_Lune":
     title: "XVIII: La Lune"
     source: /cards/XVIII_La_Lune.jpg
     meaning: >-
       Hidden enemies, danger, calumny, darkness, terror, deception, occult
       forces, error.
     reversed: "Instability, inconstancy, silence, lesser degrees of deception and error."
-  "XIX: Le Soleil":
+  "XIX_Le_Soleil":
     title: "XIX: Le Soleil"
     source: /cards/XIX_Le_Soleil.jpg
     meaning: "Material happiness, fortunate marriage, contentment."
     reversed: "Material happiness, fortunate marriage, contentment -- in a lesser sense."
-  "XX: Le Jugement":
+  "XX_Le_Jugement":
     title: "XX: Le Jugement"
     source: /cards/XX_Le_Jugement.jpg
     meaning: >-
@@ -151,30 +151,30 @@ cards:
     reversed: >-
       Weakness, pusillanimity, simplicity; also deliberation, decision,
       sentence.
-  "XXI: Le Monde":
+  "XXI_Le_Monde":
     title: "XXI: Le Monde"
     source: /cards/XXI_Le_Monde.jpg
     meaning: >-
       Assured success, recompense, voyage, route, emigration, flight, change of
       place.
     reversed: "Inertia, fixity, stagnation, permanence."
-  Roi d'Epee:
-    title: Roi d'Épée
+  "Roi_d_Epee":
+    title: "Roi d'Épée"
     source: /cards/Roi_d_Epee.jpg
     meaning: >-
       Whatsoever arises out of the idea of judgment and all its
       connexions-power, command, authority, militant intelligence, law, offices
       of the crown, and so forth.
     reversed: "Cruelty, perversity, barbarity, perfidy, evil intention."
-  Reine d'Epee:
-    title: Reine d'Épée
+  "Reine_d_Epee":
+    title: "Reine d'Épée"
     source: /cards/Reine_d_Epee.jpg
     meaning: >-
       Widowhood, female sadness and embarrassment, absence, sterility, mourning,
       privation, separation.
     reversed: "Malice, bigotry, artifice, prudery, bale, deceit."
-  Chevalier d'Epee:
-    title: Chevalier d'Épée
+  "Chevalier_d_Epee":
+    title: "Chevalier d'Épée"
     source: /cards/Chevalier_d_Epee.jpg
     meaning: >-
       Skill, bravery, capacity, defence, address, enmity, wrath, war,
@@ -182,8 +182,8 @@ cards:
       which the card signifies death, but it carries this meaning only in its
       proximity to other cards of fatality.
     reversed: "Imprudence, incapacity, extravagance."
-  Valet d'Epee:
-    title: Valet d'Épée
+  "Valet_d_Epee":
+    title: "Valet d'Épée"
     source: /cards/Valet_d_Epee.jpg
     meaning: >-
       Authority, overseeing, secret service, vigilance, spying, examination, and
@@ -192,8 +192,8 @@ cards:
       More evil side of these qualities (authority, overseeing, secret service,
       vigilance, spying, examination); what is unforeseen, unprepared state;
       sickness is also intimated.
-  X d'Epee:
-    title: X d'Épée
+  "X_d_Epee":
+    title: "X d'Épée"
     source: /cards/X_d_Epee.jpg
     meaning: >-
       Whatsoever is intimated by the design; also pain, affliction, tears,
@@ -201,13 +201,13 @@ cards:
     reversed: >-
       Advantage, profit, success, favour, but none of these are permanent; also
       power and authority.
-  IX d'Epee:
-    title: IX d'Épée
+  "IX_d_Epee":
+    title: "IX d'Épée"
     source: /cards/IX_d_Epee.jpg
     meaning: "Death, failure, miscarriage, delay, deception, disappointment, despair."
     reversed: "Imprisonment, suspicion, doubt, reasonable fear, shame."
-  VIII d'Epee:
-    title: VIII d'Épée
+  "VIII_d_Epee":
+    title: "VIII d'Épée"
     source: /cards/VIII_d_Epee.jpg
     meaning: >-
       Bad news, violent chagrin, crisis, censure, power in trammels, conflict,
@@ -215,23 +215,23 @@ cards:
     reversed: >-
       Disquiet, difficulty, opposition, accident, treachery; what is unforeseen;
       fatality.
-  VII d'Epee:
-    title: VII d'Épée
+  "VII_d_Epee":
+    title: "VII d'Épée"
     source: /cards/VII_d_Epee.jpg
     meaning: >-
       Design, attempt, wish, hope, confidence; also quarrelling, a plan that may
       fail, annoyance. The design is uncertain in its import, because the
       significations are widely at variance with each other.
     reversed: "Good advice, counsel, instruction, slander, babbling."
-  VI d'Epee:
-    title: VI d'Épée
+  "VI_d_Epee":
+    title: "VI d'Épée"
     source: /cards/VI_d_Epee.jpg
     meaning: "journey by water, route, way, envoy, commissionary, expedient."
     reversed: >-
       Declaration, confession, publicity; one account says that it is a proposal
       of love.
-  V d'Epee:
-    title: V d'Épée
+  "V_d_Epee":
+    title: "V d'Épée"
     source: /cards/V_d_Epee.jpg
     meaning: >-
       Degradation, destruction, revocation, infamy, dishonour, loss, with the
@@ -239,25 +239,23 @@ cards:
     reversed: >-
       Degradation, destruction, revocation, infamy, dishonour, loss, with the
       variants and analogues of these.; burial and obsequies.
-  IV d'Epee:
-    title: IV d'Épée
+  "IV_d_Epee":
+    title: "IV d'Épée"
     source: /cards/IV_d_Epee.jpg
-    meaning: >-
-      Vigilance, retreat, solitude, hermit's repose, exile, tomb and coffin. It
-      is these last that have suggested the design.
+    meaning: "Vigilance, retreat, solitude, hermit's repose, exile, tomb and coffin. It is these last that have suggested the design."
     reversed: >-
       Wise administration, circumspection, economy, avarice, precaution,
       testament.
-  III d'Epee:
-    title: III d'Épée
+  "III_d_Epee":
+    title: "III d'Épée"
     source: /cards/III_d_Epee.jpg
     meaning: >-
       Removal, absence, delay, division, rupture, dispersion, and all that the
       design signifies naturally, being too simple and obvious to call for
       specific enumeration
     reversed: "Mental alienation, error, loss, distraction, disorder, confusion."
-  II d'Epee:
-    title: II d'Épée
+  "II_d_Epee":
+    title: "II d'Épée"
     source: /cards/II_d_Epee.jpg
     meaning: >-
       Conformity and the equipoise which it suggests, courage, friendship,
@@ -266,8 +264,8 @@ cards:
       considered in a qualified manner, as Swords generally are not symbolical
       of beneficent forces in human affairs.
     reversed: "Imposture, falsehood, duplicity, disloyalty."
-  I d'Epee:
-    title: I d'Épée
+  "I_d_Epee":
+    title: "I d'Épée"
     source: /cards/I_d_Epee.jpg
     meaning: >-
       Triumph, the excessive degree in everything, conquest, triumph of force.
@@ -278,7 +276,7 @@ cards:
       Triumph, the excessive degree in everything, conquest, triumph of force,
       but the results are disastrous; another account says—conception,
       childbirth, augmentation, multiplicity.
-  Roi de Baton:
+  Roi_de Baton:
     title: Roi de Bâton
     source: /cards/Roi_de_Baton.jpg
     meaning: >-
@@ -286,7 +284,7 @@ cards:
       conscientious. The card always signifies honesty, and may mean news
       concerning an unexpected heritage to fall in before very long.
     reversed: "Good, but severe; austere, yet tolerant."
-  Reine de Baton:
+  Reine_de Baton:
     title: Reine de Bâton
     source: /cards/Reine_de_Baton.jpg
     meaning: >-
@@ -298,14 +296,14 @@ cards:
       Good, economical, obliging, serviceable. Signifies also—but in certain
       positions and in the neighbourhood of other cards tending in such
       directions—opposition, jealousy, even deceit and infidelity.
-  Chevalier de Baton:
+  Chevalier_de Baton:
     title: Chevalier de Bâton
     source: /cards/Chevalier_de_Baton.jpg
     meaning: >-
       Departure, absence, flight, emigration. A dark young man, friendly. Change
       of residence.
     reversed: "Rupture, division, interruption, discord."
-  Valet de Baton:
+  Valet_de Baton:
     title: Valet de Bâton
     source: /cards/Valet_de_Baton.jpg
     meaning: >-
@@ -316,7 +314,7 @@ cards:
     reversed: >-
       Anecdotes, announcements, evil news. Also indecision and the instability
       which accompanies it.
-  X de Baton:
+  X_de Baton:
     title: X de Bâton
     source: /cards/X_de_Baton.jpg
     meaning: >-
@@ -329,7 +327,7 @@ cards:
       stultified if the Nine of Swords follows, and if it is a question of a
       lawsuit, there will be certain loss.
     reversed: "Contrarieties, difficulties, intrigues, and their analogies."
-  IX de Baton:
+  IX_de Baton:
     title: IX de Bâton
     source: /cards/IX_de_Baton.jpg
     meaning: >-
@@ -338,7 +336,7 @@ cards:
       formidable antagonist. With this main significance there are all its
       possible adjuncts—delay, suspension, adjournment.
     reversed: "Obstacles, adversity, calamity."
-  VIII de Baton:
+  VIII_de Baton:
     title: VIII de Bâton
     source: /cards/VIII_de_Baton.jpg
     meaning: >-
@@ -349,7 +347,7 @@ cards:
     reversed: >-
       Arrows of jealousy, internal dispute, stingings of conscience, quarrels;
       and domestic disputes for persons who are married.
-  VII de Baton:
+  VII_de Baton:
     title: VII de Bâton
     source: /cards/VII_de_Baton.jpg
     meaning: >-
@@ -361,18 +359,14 @@ cards:
     reversed: >-
       Perplexity, embarrassments, anxiety. It is also a caution against
       indecision.
-  VI de Baton:
+  VI_de Baton:
     title: VI de Bâton
     source: /cards/VI_de_Baton.jpg
-    meaning: >-
-      The card has been so designed that it can cover several significations; on
-      the surface, it is a victor triumphing, but it is also great news, such as
-      might be carried in state by the King's courier; it is expectation crowned
-      with its own desire, the crown of hope, and so forth.
+    meaning: "The card has been so designed that it can cover several significations; on the surface, it is a victor triumphing, but it is also great news, such as might be carried in state by the King's courier; it is expectation crowned with its own desire, the crown of hope, and so forth."
     reversed: >-
       Apprehension, fear, as of a victorious enemy at the gate; treachery,
       disloyalty, as of gates being opened to the enemy; also indefinite delay.
-  V de Baton:
+  V_de Baton:
     title: V de Bâton
     source: /cards/V_de_Baton.jpg
     meaning: >-
@@ -381,7 +375,7 @@ cards:
       connects with the battle of life. Hence some attributions say that it is a
       card of gold, gain, opulence.
     reversed: "Litigation, disputes, trickery, contradiction."
-  IV de Baton:
+  IV_de Baton:
     title: IV de Bâton
     source: /cards/IV_de_Baton.jpg
     meaning: >-
@@ -391,7 +385,7 @@ cards:
     reversed: >-
       The meaning remains unaltered; it is prosperity, increase, felicity,
       beauty, embellishment.
-  III de Baton:
+  III_de Baton:
     title: III de Baton
     source: /cards/III_de_Baton.jpg
     meaning: >-
@@ -403,18 +397,12 @@ cards:
     reversed: >-
       The end of troubles, suspension or cessation of adversity, toil and
       disappointment.
-  II de Baton:
+  II_de Baton:
     title: II de Bâton
     source: /cards/II_de_Baton.jpg
-    meaning: >-
-      Between the alternative readings there is no marriage possible; on the one
-      hand, riches, fortune, magnificence; on the other, physical suffering,
-      disease, chagrin, sadness, mortification. The design gives one suggestion;
-      here is a lord overlooking his dominion and alternately contemplating a
-      globe; it looks like the malady, the mortification, the sadness of
-      Alexander amidst the grandeur of this world's wealth.
+    meaning: "Between the alternative readings there is no marriage possible; on the one hand, riches, fortune, magnificence; on the other, physical suffering, disease, chagrin, sadness, mortification. The design gives one suggestion; here is a lord overlooking his dominion and alternately contemplating a globe; it looks like the malady, the mortification, the sadness of Alexander amidst the grandeur of this world's wealth."
     reversed: "Surprise, wonder, enchantment, emotion, trouble, fear."
-  I de Baton:
+  I_de Baton:
     title: I de Bâton
     source: /cards/I_de_Baton.jpg
     meaning: >-
@@ -423,7 +411,7 @@ cards:
       virility which is behind them; the starting point of enterprises;
       according to another account, money, fortune, inheritance.
     reversed: "Fall, decadence, ruin, perdition, to perish also a certain clouded joy."
-  Roi de Coupe:
+  Roi_de Coupe:
     title: Roi de Coupe
     source: /cards/Roi_de_Coupe.jpg
     meaning: >-
@@ -433,7 +421,7 @@ cards:
     reversed: >-
       Dishonest, double-dealing man; roguery, exaction, injustice, vice,
       scandal, pillage, considerable loss.
-  Reine de Coupe:
+  Reine_de Coupe:
     title: Reine de Coupe
     source: /cards/Reine_de_Coupe.jpg
     meaning: >-
@@ -444,14 +432,14 @@ cards:
     reversed: >-
       The accounts vary; good woman; otherwise, distinguished woman but one not
       to be trusted; perverse woman; vice, dishonour, depravity.
-  Chevalier de Coupe:
+  Chevalier_de Coupe:
     title: Chevalier de Coupe
     source: /cards/Chevalier_de_Coupe.jpg
     meaning: >-
       Arrival, approach—sometimes that of a messenger; advances, proposition,
       demeanour, invitation, incitement.
     reversed: "Trickery, artifice, subtlety, swindling, duplicity, fraud."
-  Valet de Coupe:
+  Valet_de Coupe:
     title: Valet de Coupe
     source: /cards/Valet_de_Coupe.jpg
     meaning: >-
@@ -459,16 +447,12 @@ cards:
       will be connected; a studious youth; news, message; application,
       reflection, meditation; also these things directed to business.
     reversed: "Taste, inclination, attachment, seduction, deception, artifice."
-  X de Coupe:
+  X_de Coupe:
     title: X de Coupe
     source: /cards/X_de_Coupe.jpg
-    meaning: >-
-      Contentment, repose of the entire heart; the perfection of that state;
-      also perfection of human love and friendship; if with several
-      picture-cards, a person who is taking charge of the Querent's interests;
-      also the town, village or country inhabited by the Querent.
+    meaning: "Contentment, repose of the entire heart; the perfection of that state; also perfection of human love and friendship; if with several picture-cards, a person who is taking charge of the Querent's interests; also the town, village or country inhabited by the Querent."
     reversed: "Repose of the false heart, indignation, violence."
-  IX de Coupe:
+  IX_de Coupe:
     title: IX de Coupe
     source: /cards/IX_de_Coupe.jpg
     meaning: >-
@@ -478,7 +462,7 @@ cards:
     reversed: >-
       Truth, loyalty, liberty; but the readings vary and include mistakes,
       imperfections, etc.
-  VIII de Coupe:
+  VIII_de Coupe:
     title: VIII de Coupe
     source: /cards/VIII_de_Coupe.jpg
     meaning: >-
@@ -488,7 +472,7 @@ cards:
       matter which has been thought to be important is really of slight
       consequence—either for good or evil.
     reversed: "Great joy, happiness, feasting."
-  VII de Coupe:
+  VII_de Coupe:
     title: VII de Coupe
     source: /cards/VII_de_Coupe.jpg
     meaning: >-
@@ -496,7 +480,7 @@ cards:
       in the glass of contemplation; some attainment in these degrees, but
       nothing permanent or substantial is suggested.
     reversed: "Desire, will, determination, project."
-  VI de Coupe:
+  VI_de Coupe:
     title: VI de Coupe
     source: /cards/VI_de_Coupe.jpg
     meaning: >-
@@ -506,7 +490,7 @@ cards:
       new knowledge, new environment, and then the children are disporting in an
       unfamiliar precinct.
     reversed: "The future, renewal, that which will come to pass presently."
-  V de Coupe:
+  V_de Coupe:
     title: V de Coupe
     source: /cards/V_de_Coupe.jpg
     meaning: >-
@@ -517,7 +501,7 @@ cards:
     reversed: >-
       News, alliances, affinity, consanguinity, ancestry, return, false
       projects.
-  IV de Coupe:
+  IV_de Coupe:
     title: IV de Coupe
     source: /cards/IV_de_Coupe.jpg
     meaning: >-
@@ -526,7 +510,7 @@ cards:
       offered the wastrel, but he sees no consolation therein. This is also a
       card of blended pleasure.
     reversed: "Novelty, presage, new instruction, new relations."
-  III de Coupe:
+  III_de Coupe:
     title: III de Coupe
     source: /cards/III_de_Coupe.jpg
     meaning: >-
@@ -535,7 +519,7 @@ cards:
     reversed: >-
       Expedition, dispatch, achievement, end. It signifies also the side of
       excess in physical enjoyment, and the pleasures of the senses.
-  II de Coupe:
+  II_de Coupe:
     title: II de Coupe
     source: /cards/II_de_Coupe.jpg
     meaning: >-
@@ -544,14 +528,14 @@ cards:
       divination—that desire which is not in Nature, but by which Nature is
       sanctified.
     reversed: "Self-love, break-ups, disharmony, distrust."
-  I de Coupe:
+  I_de Coupe:
     title: I de Coupe
     source: /cards/I_de_Coupe.jpg
     meaning: >-
       House of the true heart, joy, content, abode, nourishment, abundance,
       fertility; Holy Table, felicity hereof.
     reversed: "House of the false heart, mutation, instability, revolution."
-  Roi de Denier:
+  Roi_de Denier:
     title: Roi de Denier
     source: /cards/Roi_de_Denier.jpg
     meaning: >-
@@ -559,12 +543,12 @@ cards:
       sometimes mathematical gifts and attainments of this kind; success in
       these paths.
     reversed: "Vice, weakness, ugliness, perversity, corruption, peril."
-  Reine de Denier:
+  Reine_de Denier:
     title: Reine de Denier
     source: /cards/Reine_de_Denier.jpg
     meaning: "Opulence, generosity, magnificence, security, liberty."
     reversed: "Evil, suspicion, suspense, fear, mistrust."
-  Chevalier de Denier:
+  Chevalier_de Denier:
     title: Chevalier de Denier
     source: /cards/Chevalier_de_Denier.jpg
     meaning: >-
@@ -573,26 +557,26 @@ cards:
     reversed: >-
       inertia, idleness, repose of that kind, stagnation; also placidity,
       discouragement, carelessness.
-  Valet de Denier:
+  Valet_de Denier:
     title: Valet de Denier
     source: /cards/Valet_de_Denier.jpg
     meaning: >-
       Application, study, scholarship, reflection another reading says news,
       messages and the bringer thereof; also rule, management.
     reversed: "Prodigality, dissipation, liberality, luxury; unfavourable news."
-  X de Denier:
+  X_de Denier:
     title: X de Denier
     source: /cards/X_de_Denier.jpg
     meaning: "Gain, riches; family matters, archives, extraction, the abode of a family."
     reversed: >-
       Chance, fatality, loss, robbery, games of hazard; sometimes gift, dowry,
       pension.
-  IX de Denier:
+  IX_de Denier:
     title: IX de Denier
     source: /cards/IX_de_Denier.jpg
     meaning: "Prudence, safety, success, accomplishment, certitude, discernment."
     reversed: "Roguery, deception, voided project, bad faith."
-  VIII de Denier:
+  VIII_de Denier:
     title: VIII de Denier
     source: /cards/VIII_de_Denier.jpg
     meaning: >-
@@ -602,7 +586,7 @@ cards:
       Voided ambition, vanity, cupidity, exaction, usury. It may also signify
       the possession of skill, in the sense of the ingenious mind turned to
       cunning and intrigue.
-  VII de Denier:
+  VII_de Denier:
     title: VII de Denier
     source: /cards/VII_de_Denier.jpg
     meaning: >-
@@ -610,14 +594,14 @@ cards:
       business, barter; but one reading gives altercation, quarrels—and another
       innocence, ingenuity, purgation.
     reversed: Cause for anxiety regarding money which it may be proposed to lend.
-  VI de Denier:
+  VI_de Denier:
     title: VI de Denier
     source: /cards/VI_de_Denier.jpg
     meaning: >-
       Presents, gifts, gratification another account says attention, vigilance
       now is the accepted time, present prosperity, etc.
     reversed: "Desire, cupidity, envy, jealousy, illusion."
-  V de Denier:
+  V_de Denier:
     title: V de Denier
     source: /cards/V_de_Denier.jpg
     meaning: >-
@@ -626,21 +610,21 @@ cards:
       is a card of love and lovers-wife, husband, friend, mistress; also
       concordance, affinities. These alternatives cannot be harmonized.
     reversed: "Disorder, chaos, ruin, discord, profligacy."
-  IV de Denier:
+  IV_de Denier:
     title: IV de Denier
     source: /cards/IV_de_Denier.jpg
     meaning: >-
       The surety of possessions, cleaving to that which one has, gift, legacy,
       inheritance.
     reversed: "Suspense, delay, opposition."
-  III de Denier:
+  III_de Denier:
     title: III de Denier
     source: /cards/III_de_Denier.jpg
     meaning: >-
       Métier, trade, skilled labour; usually, however, regarded as a card of
       nobility, aristocracy, renown, glory.
     reversed: "Mediocrity, in work and otherwise, puerility, pettiness, weakness."
-  II de Denier:
+  II_de Denier:
     title: II de Denier
     source: /cards/II_de_Denier.jpg
     meaning: >-
@@ -651,7 +635,7 @@ cards:
     reversed: >-
       Enforced gaiety, simulated enjoyment, literal sense, handwriting,
       composition, letters of exchange.
-  I de Denier:
+  I_de Denier:
     title: I de Denier
     source: /cards/I_de_Denier.jpg
     meaning: "Perfect contentment, felicity, ecstasy; also speedy intelligence; gold."

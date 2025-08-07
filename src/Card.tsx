@@ -16,9 +16,7 @@ function CardTitle({
     <div className={"card-title"}>
       <Tooltip
         title={
-          <div style={{ fontSize: "1.25em" }} className={"card-tooltip-title"}>
-            {card.displayMeaning()}
-          </div>
+          <div className={"card-tooltip-title"}>{card.displayMeaning()}</div>
         }
         arrow
         placement="bottom-start"
