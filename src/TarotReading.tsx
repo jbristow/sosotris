@@ -6,6 +6,7 @@ import { Card } from "./Card.tsx";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { PromptButton } from "./PromptButton.tsx";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
+import { useEffect } from "react";
 function IneffableOverlay({
   ineffable,
   rotation,
@@ -47,7 +48,9 @@ export function TarotReading({
   const cards = deck.deal(12);
   const ineffableSeen = cards.findIndex((card) => card.isIneffable) >= 0;
   const rotation = Math.floor(Math.random() * 20) + 70;
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Grid container>
