@@ -14,15 +14,18 @@ export default tseslint.config([
       js.configs.recommended,
       tseslint.configs.recommended,
       reactPlugin.configs.flat.recommended,
+      reactPlugin.configs.flat["jsx-runtime"],
       reactHooks.configs["recommended-latest"],
       reactRefresh.configs.vite,
     ],
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
-    },
-    rules: {
-      "react/react-in-jsx-scope": "off",
     },
   },
 ]);
