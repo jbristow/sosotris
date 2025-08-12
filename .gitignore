@@ -31,3 +31,4 @@ dist-ssr
 !.env.example
 
 src/assets/cards-official
+public/official
