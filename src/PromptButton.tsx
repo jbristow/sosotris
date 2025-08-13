@@ -10,6 +10,8 @@ The governing metaphor of your reading is that of a theatrical play and its elem
 
 To some, The King in Yellow is a two-act play in a slim book. In the play, a stranger arrives at a masked ball in the far-off royal court of Yhtill in Carcosa. Calling himself the Phantom of Truth, he reveals that of all the partygoers only he wears no mask. He claims his own pallid mask, a porcelain rictus, is his true face. This revelation somehow signals the end of the partygoers’ world.
 
+---
+
 This is a list of positions and their meanings in the order that they are drawn:
 
 1. **Signifier**: Suggests the situation and was chosen by the me, the person seeking the reading.
@@ -26,6 +28,8 @@ This is a list of positions and their meanings in the order that they are drawn:
 12. **Revelation**: Represents that which will be revealed by engaging with the situation implied by the Signifier.
 13. **Denouement**: Represents the final outcome of the situation implied by the Signifier.
 
+---
+
 This is a list of the cards in the order they were drawn:
 
 1. ${signifier.displayTitle()}`;
@@ -39,7 +43,9 @@ If a card is listed as **Ineffable**, then its nature and meaning are not for th
 
 If no cards are listed as **Ineffable**, then it must be found in the deck and placed face down and unseen covering the Signifier card where it represents an unknowable influence upon the situation.
 
-Interpret the meaning of this reading, remembering to link all cards together into a natural narrative that concerns the situation implied by the Signifier card. Be as specific as possible.
+---
+
+Interpret the meaning of this reading, taking care to tie each card to the situation implied by the Signifier card. The final summary should be as specific as possible, providing details of what is and what will be that show the reader has true divinatory powers.
 `;
   return textToCopy;
 }
